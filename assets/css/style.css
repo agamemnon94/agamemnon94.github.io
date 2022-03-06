@@ -1,0 +1,788 @@
+/******  Bug transitions  *******/
+.clean__transition * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}
+/******   reset  *******/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --beige: #aeaea782;
+  --dark: #0c0c0c;
+}
+
+/********************/
+/*** GENERALITES  ***/
+/********************/
+html {
+  background: white;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  min-height: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+.body__night
+  *:not(.work_Here, .my__byke, .mon__style__inside, .branding, .span, .reals, .sun, .moon) {
+  background: var(--dark);
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+/* .body__light__text p {
+  color: #fff;
+} */
+
+.nightbtn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+
+  cursor: pointer;
+}
+.sunbtn {
+}
+.moon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+  opacity: 1;
+}
+.sun {
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+}
+.light {
+  opacity: 1;
+  z-index: 2;
+}
+.darknight {
+  opacity: 0;
+  z-index: -2;
+}
+
+body::-webkit-scrollbar {
+  width: 12px; /* largeur de la scrollbar */
+}
+body::-webkit-scrollbar-track {
+  /* color of the tracking area */
+  background: #111;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--beige); /* color of the scroll thumb */
+  border-radius: 10px; /* roundness of the scroll thumb */
+  border: 3px solid #111; /* creates padding around scroll thumb */
+}
+body::-webkit-scrollbar-corner {
+  /* Coin de la fenêtre */
+  background: #111;
+}
+
+/*******************/
+/***** HEADER ******/
+/*******************/
+.header__container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  display: grid;
+  grid-template-columns: 33% 65%;
+  border: 3px solid #000;
+  background: #ffffff;
+  z-index: 100;
+  transition: all 0.2s ease-out;
+}
+.header__hidden {
+  top: -90px;
+}
+
+.nav__container {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  z-index: 30;
+  border-left: 3px solid #000;
+  width: 100%;
+}
+.header__name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Spartan";
+  font-weight: 500;
+  font-size: 30px;
+  justify-self: center;
+  margin: 0 auto;
+  width: 100%;
+  background: var(--beige);
+  user-select: none;
+}
+.header__list {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  padding-right: 40px;
+  list-style-type: none;
+  z-index: 20;
+}
+
+.item__accueil {
+  display: flex;
+  align-items: center;
+}
+.header__a {
+  font-family: "Spartan";
+  font-size: 18px;
+  text-decoration: none;
+  color: #000;
+  margin: 0 20px;
+  z-index: 21;
+}
+
+.header__a::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid #111;
+  width: 0px;
+  border-radius: 5px;
+  margin: 2px auto 0 auto;
+  transition: 0.3s ease-in-out;
+}
+.header__a:hover::after {
+  width: 100%;
+}
+
+/******************/
+/****** MAIN ******/
+/******************/
+
+.section__1 {
+  display: grid;
+  grid-template-rows: 650px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 90px;
+}
+.box__moi {
+  grid-area: 1/2 1/2;
+  width: 850px;
+  height: 650px;
+  border: 2px solid #000;
+  border-top: 1px solid #000;
+  overflow: hidden;
+}
+.moi {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0px -185px;
+  transform: scale(1.2);
+  transition: all 0.5s ease-in-out;
+}
+.moi:hover {
+  transform: scale(1);
+}
+.bloc__whoami {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  width: 600px;
+  height: 650px;
+  border: 2px solid #000;
+  border-top: 1px solid #000;
+  z-index: 0;
+}
+.bloc__whoami h2 {
+  font-family: "Spartan";
+  font-weight: 500;
+  font-size: 26px;
+  margin-bottom: 2rem;
+}
+.p__who {
+  font-family: "Spartan";
+  font-size: 20px;
+  padding: 10px 0;
+}
+.a_propos {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: "Archivo";
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #111;
+  grid-area: 1/2 2/3;
+}
+.work_Here {
+  position: relative;
+  width: auto;
+  height: 650px;
+  background-image: url(/assets/img/Big_Work_Here.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid #000;
+  border-top: 1px solid #000;
+  grid-area: 1/2 3/4;
+}
+.a_work_Here {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: "Archivo";
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #fff;
+}
+.section__2 {
+  display: grid;
+  grid-template-rows: 650px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.presentation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 650px;
+  border: 2px solid #000;
+  grid-area: 1/2 2/3;
+}
+.cv_mobile {
+  position: relative;
+  display: block;
+  width: 350px;
+  height: 400px;
+  background-color: #fff;
+  box-shadow: 2px 5px 25px #0004;
+  border-radius: 4px;
+}
+.cv_mobile p {
+  font-size: 40px;
+  font-family: "Archivo";
+}
+@keyframes movingLight {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.span {
+  display: block;
+  width: auto;
+  height: auto;
+  margin: auto;
+  font-size: 35px;
+  font-family: "Spartan";
+  font-weight: 600;
+  background-image: url(/assets/img/raphael-schaller-GkinCd2enIY-unsplash.jpg);
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: movingLight 6s ease-in-out infinite;
+  user-select: none;
+}
+.span1 {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  font-size: 30px;
+}
+.span2 {
+  position: absolute;
+  top: 90px;
+  right: -10px;
+  transform: rotateZ(90deg);
+  font-size: 65px;
+}
+.span3 {
+  position: absolute;
+  top: 90px;
+  left: 45px;
+  font-size: 70px;
+}
+.span4 {
+  position: absolute;
+  top: 100px;
+  left: 90px;
+  font-size: 70px;
+}
+.span5 {
+  position: absolute;
+  top: 90px;
+  left: 155px;
+  font-size: 70px;
+}
+.span6 {
+  position: absolute;
+  top: 220px;
+  left: 45px;
+  font-size: 50px;
+}
+.span7 {
+  position: absolute;
+  top: 200px;
+  left: 90px;
+  width: 80px;
+  height: 80px;
+  background-clip: content-box;
+  border-radius: 50%;
+}
+.span8 {
+  position: absolute;
+  top: 220px;
+  right: 40px;
+  font-size: 50px;
+}
+.span9 {
+  position: absolute;
+  top: 305px;
+  left: 45px;
+}
+.span10 {
+  position: absolute;
+  top: 305px;
+  right: 45px;
+}
+.span10::after {
+  content: "";
+  display: block;
+  background-image: url(/assets/img/raphael-schaller-GkinCd2enIY-unsplash.jpg);
+  background-size: 400% 400%;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  color: transparent;
+  animation: movingLight 6s ease-in-out infinite;
+  user-select: none;
+  width: 100%;
+  height: 15px;
+}
+
+.a_presentation {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: "Archivo";
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #111;
+}
+.experiences {
+  position: relative;
+  width: 800px;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #aeaea782;
+  border: 2px solid #000;
+  grid-area: 2/3 2/3;
+}
+.a_experience {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: "Archivo";
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #111;
+}
+.diaporama {
+  position: relative;
+  display: flex;
+  width: 500px;
+  height: 500px;
+}
+.expdiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: 0.8s ease-in-out;
+  margin-top: -4rem;
+}
+.annee__exp {
+  font-family: "Spartan";
+  font-size: 18px;
+  font-weight: 300;
+  padding-bottom: 2rem;
+}
+.role {
+  font-family: "Spartan";
+  font-size: 24px;
+  font-weight: 500;
+}
+.firm {
+  font-family: "Spartan";
+  /* margin: 5rem 0; */
+  font-size: 16px;
+  font-weight: 500;
+}
+.descri__post {
+  font-family: "Spartan";
+  font-size: 16px;
+  text-align: center;
+  color: #111;
+}
+.previous_exp {
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  border: none;
+  border-radius: 0 0 0 3px;
+  border-bottom: 1px solid #111;
+  border-left: 1px solid #111;
+  background: transparent;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.next_exp {
+  width: 20px;
+  height: 20px;
+  transform: rotate(-45deg);
+  border: none;
+  border-radius: 0 0 3px 0;
+  border-bottom: 1px solid #111;
+  border-right: 1px solid #111;
+  background: transparent;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+.prev__dark__active {
+  border-bottom: 1px solid var(--beige);
+  border-left: 1px solid var(--beige);
+}
+.next__dark__active {
+  border-bottom: 1px solid var(--beige);
+  border-right: 1px solid var(--beige);
+}
+
+.my__byke {
+  position: relative;
+  width: 500px;
+  height: 650px;
+  background-image: url(/assets/img/kymco-ak-550-2017-37.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid #000;
+  grid-area: 2/3 3/4;
+}
+.my_byke_p {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: "Archivo";
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+.section__3 {
+  display: grid;
+  grid-template-rows: 650px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.formation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 750px;
+  height: 650px;
+  background: rgba(193, 208, 218, 0.8);
+  border: 2px solid #000;
+  grid-area: 1/2 1/2;
+  padding-bottom: 8rem;
+}
+.formbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+.formbox h4 {
+  font-family: "Spartan";
+  font-size: 22px;
+  font-weight: 400;
+  margin: 2rem 0;
+  color: #111;
+}
+.formbox p {
+  font-size: 14px;
+  font-family: "Spartan";
+  padding: 0.5rem 0;
+  color: #111;
+}
+.formation__p {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: "Archivo";
+  font-size: 16px;
+  font-weight: bold;
+  color: #111;
+}
+.branding {
+  position: relative;
+  width: 600px;
+  height: 650px;
+  border: 2px solid #000;
+  grid-area: 2/3 1/2;
+  background-image: url(/assets/img/OLATUA__Full__Page.png);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.branding__p {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: "Archivo";
+  font-size: 16px;
+  font-weight: bold;
+  color: #111;
+  background: #fff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+}
+.competence {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: auto;
+  height: 650px;
+  background: #fff;
+  border: 2px solid #000;
+  grid-area: 3/4 1/2;
+  background-color: #111;
+}
+.checked {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checked img {
+  width: 36px;
+  height: 36px;
+  margin: 0px 15px 0 5px;
+}
+.comp__text {
+  color: #fff;
+  font-size: 18px;
+  font-family: "Spartan";
+  font-weight: 300;
+}
+
+.competence__p {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: "Archivo";
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.section__4 {
+  display: grid;
+  grid-template-rows: 550px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mon__style {
+  position: relative;
+  width: auto;
+  height: 550px;
+  background: #fff;
+  border: 2px solid #000;
+  grid-area: 1/2 1/2;
+  overflow: hidden;
+}
+.mon__style__inside {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -31%);
+  width: 900px;
+  height: 900px;
+  background-image: url(/assets/img/brown_boots.jpg);
+  background-size: contain;
+  background-position: center;
+}
+
+.mon__style__p {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: "Archivo";
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.me__contacter {
+  position: relative;
+  width: auto;
+  height: 550px;
+  background: #fff;
+  border: 2px solid #000;
+  grid-area: 1/2 2/3;
+}
+.contact__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12rem;
+}
+.contact__box h3 {
+  font-size: 28px;
+  font-family: "Spartan";
+  font-weight: 400;
+  text-align: center;
+  word-spacing: 10px;
+  line-height: 40px;
+  margin-bottom: 4rem;
+}
+.contact__box a,
+span {
+  color: #111;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Spartan";
+  padding: 1rem 0;
+}
+.me__contacter__p {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: "Archivo";
+  font-size: 16px;
+  font-weight: bold;
+  color: #111;
+}
+.reals {
+  position: relative;
+  width: auto;
+  height: 550px;
+  background: #fff;
+  border: 2px solid #000;
+  grid-area: 1/2 2/3;
+}
+.reals__p {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: "Archivo";
+  font-size: 16px;
+  font-weight: bold;
+  color: #111;
+}
+
+.section__footer {
+  display: grid;
+  grid-template-rows: 90px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.twitter,
+.linkedin,
+.github {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 110px;
+  background: #fff;
+  border: 2px solid #000;
+  border-bottom: 4px solid #000;
+}
+.section__footer a {
+  font-size: 25px;
+  font-family: "Spartan";
+  font-weight: 500;
+  letter-spacing: -1px;
+  color: #111;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  line-height: 110px;
+  text-align: center;
+  transition: 0.2s ease;
+}
+.section__footer a:hover {
+  background: var(--beige);
+}
+
+.p__copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #111;
+  font-family: "Spartan";
+  font-size: 14px;
+  /* padding: 4rem 0; */
+  height: 110px;
+  margin-top: 20px;
+}
+/*******************/
+/***** FOOTER ******/
+/*******************/
