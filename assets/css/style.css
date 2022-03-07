@@ -37,7 +37,7 @@ body {
   *:not(.work_Here, .my__byke, .mon__style__inside, .branding, .span, .reals, .sun, .moon) {
   background: var(--dark);
   color: #fff;
-  transition: 0.3s ease-in-out;
+  /* transition: 0.3s ease-in-out; */
 }
 .nightbtn {
   position: relative;
@@ -187,7 +187,7 @@ body::-webkit-scrollbar-corner {
   object-fit: cover;
   object-position: 0px -185px;
   transform: scale(1.2);
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .moi:hover {
   transform: scale(1);
@@ -431,7 +431,7 @@ body::-webkit-scrollbar-corner {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  transition: 0.8s ease-in-out;
+  transition: opacity 0.8s ease-in-out;
   margin-top: -4rem;
 }
 .annee__exp {
