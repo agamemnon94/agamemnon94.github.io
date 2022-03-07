@@ -7,21 +7,24 @@ const branding = document.getElementById('branding');
 const headerContainer = document.querySelector('.header__container');
 const monStyle = document.querySelector('.mon__style__inside');
 
+let lastScrollTop = 0;
+let navbar = document.querySelector('.header__container');
+
 
 window.addEventListener('scroll', function () {
   branding.style.backgroundPositionY = `${-window.scrollY / 1.49}px`;
   monStyle.style.backgroundPositionY = `${window.scrollY * 0.3}px`;
-  // console.log(scrollY);
-  if (window.scrollY > 499) {
-    headerContainer.classList.add('header__hidden');
-  } if (window.scrollY < 149) {
-    headerContainer.classList.remove('header__hidden');
+  const scrollTop = window.pageYOffset || this.document.scroolTop;
+  if (scrollTop > lastScrollTop) {
+    navbar.classList.add('header__hidden');
+  } else {
+    navbar.classList.remove('header__hidden');
   }
+  lastScrollTop = scrollTop;
 })
 
-// Diaporama fixhes expériences
+// Diaporama fiches expériences
 let fichesExp = document.querySelectorAll('.expdiv');
-console.log(fichesExp);
 let change = 0;
 let suivant = document.querySelector("#next_exp")
 let precedant = document.querySelector("#previous_exp")
