@@ -586,7 +586,7 @@ body::-webkit-scrollbar-corner {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   width: auto;
   height: 650px;
@@ -594,12 +594,15 @@ body::-webkit-scrollbar-corner {
   border: 2px solid #000;
   grid-area: 3/4 1/2;
   background-color: #111;
+  /* padding-left: 25%; */
+  /* padding: 0 auto; */
 }
 .checked {
   margin: 2rem 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-left: 25%;
 }
 .checked img {
   width: 36px;
@@ -607,6 +610,7 @@ body::-webkit-scrollbar-corner {
   margin: 0px 15px 0 5px;
 }
 .comp__text {
+  display: inline;
   color: #fff;
   font-size: 18px;
   font-family: "Spartan";
