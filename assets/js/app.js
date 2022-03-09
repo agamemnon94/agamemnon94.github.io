@@ -65,22 +65,16 @@ let moon = document.querySelector('.moon');
 
 nightbtn.addEventListener('click', function () {
   body.classList.toggle('body__night');
-  // body.classList.toggle('body__light__text');
   suivant.classList.toggle('next__dark__active');
   precedant.classList.toggle('prev__dark__active');
   sun.classList.toggle('light');
   moon.classList.toggle('darknight');
 })
 
-
-
-
 container.addEventListener('mousemove', (e) => {
   cube.style.animation = 'none';
-
   rotY = e.clientX / 1.2;
   rotX = e.clientY / 1.2;
-
   cube.style.transform = 'rotateY(' + rotY + 'deg) rotateX(' + rotX + 'deg)';
   cube.style.transition = '0.5s ease-out';
   container.addEventListener('mouseleave', () => {
