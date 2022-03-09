@@ -9,6 +9,8 @@ const monStyle = document.querySelector('.mon__style__inside');
 
 let lastScrollTop = 0;
 let navbar = document.querySelector('.header__container');
+let cube = document.getElementById('cube');
+let container = document.getElementById('result');
 
 
 window.addEventListener('scroll', function () {
@@ -68,4 +70,20 @@ nightbtn.addEventListener('click', function () {
   precedant.classList.toggle('prev__dark__active');
   sun.classList.toggle('light');
   moon.classList.toggle('darknight');
+})
+
+
+
+
+container.addEventListener('mousemove', (e) => {
+  cube.style.animation = 'none';
+
+  rotY = e.clientX / 1.2;
+  rotX = e.clientY / 1.2;
+
+  cube.style.transform = 'rotateY(' + rotY + 'deg) rotateX(' + rotX + 'deg)';
+  cube.style.transition = '0.5s ease-out';
+  container.addEventListener('mouseleave', () => {
+    cube.style.animation = 'rotate3D 45s infinite linear';
+  });
 })
