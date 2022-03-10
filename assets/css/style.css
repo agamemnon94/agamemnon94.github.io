@@ -80,16 +80,16 @@ body::-webkit-scrollbar {
 }
 body::-webkit-scrollbar-track {
   /* color of the tracking area */
-  background: #111;
+  background: var(--dark);
 }
 body::-webkit-scrollbar-thumb {
   background-color: var(--beige); /* color of the scroll thumb */
   border-radius: 10px; /* roundness of the scroll thumb */
-  border: 3px solid #111; /* creates padding around scroll thumb */
+  border: 3px solid var(--dark); /* creates padding around scroll thumb */
 }
 body::-webkit-scrollbar-corner {
   /* Coin de la fenêtre */
-  background: #111;
+  background: var(--dark);
 }
 
 /*******************/
@@ -878,6 +878,7 @@ span {
 .bodyapropos {
   display: flex;
   justify-content: center;
+  border: none;
 }
 .main__apropos {
   margin-top: 90px;
@@ -885,15 +886,23 @@ span {
   min-height: 200vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
+  border-left: 3px solid var(--dark);
+  border-right: 3px solid var(--dark);
 }
 .section__apropos {
   width: 70%;
+  min-height: 40vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-top: 10rem;
+}
+.section__apropos2 {
+  width: 70%;
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  /* margin-top: 10rem; */
 }
 .article1 {
   display: flex;
@@ -901,32 +910,42 @@ span {
   width: 400px;
   margin: 0rem 4rem;
 }
+.article2 {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 0rem 4rem;
+}
 .h1apropos {
+  line-height: 100px;
+  height: 110px;
   font-family: "Spartan", sans-serif;
   font-size: 25px;
   font-weight: 500;
-  margin: 3rem 0;
-  /* padding: 0 2rem; */
+  border-bottom: 1px solid var(--dark);
 }
 .espace {
+  display: inline-block;
   width: 100%;
-  height: 31px;
-  margin: 0rem 0;
-  /* padding: 0 4rem; */
+  height: 110px;
+  border-bottom: 1px solid var(--dark);
+}
+.espace2 {
+  width: 100%;
+  height: 110px;
+  border-bottom: 1px solid var(--dark);
 }
 .p__apropos {
   font-family: "Spartan", sans-serif;
   font-size: 16px;
   padding: 2rem 0;
   line-height: 30px;
-  border-top: 1px solid var(--dark);
 }
-
-.article2 {
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-  margin: 0rem 4rem;
+.clear__border {
+  border-top: 1px solid var(--beige);
+}
+.img__apropos {
+  margin-top: 3rem;
 }
 /************************/
 /****** RESPONSIVE ******/
