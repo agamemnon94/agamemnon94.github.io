@@ -38,10 +38,9 @@ body {
   position: relative;
 }
 .body__night
-  *:not(.work_Here, .my__byke, .mon__style__inside, .branding, .span, .reals, .sun, .moon, .face-front, .face-back, .face-right, .face-left, .face-top, .face-bottom) {
+  *:not(.work_Here, .my__byke, .mon__style, .branding, .span, .reals, .sun, .moon, .face-front, .face-back, .face-right, .face-left, .face-top, .face-bottom, .face) {
   background: var(--dark);
   color: #fff;
-  /* transition: 0.3s ease-in-out; */
 }
 .nightbtn {
   position: relative;
@@ -639,23 +638,15 @@ body::-webkit-scrollbar-corner {
 }
 .mon__style {
   position: relative;
-  width: auto;
+  width: 100%;
   height: 550px;
   background: #fff;
   border: 2px solid #000;
   grid-area: 1/2 1/2;
-  overflow: hidden;
-}
-.mon__style__inside {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -31%);
-  width: 900px;
-  height: 900px;
   background-image: url(/assets/img/brown_boots.jpg);
-  background-size: contain;
+  background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 .mon__style__p {
   position: absolute;
@@ -719,30 +710,23 @@ span {
   background: #fff;
   border: 2px solid #000;
   grid-area: 1/2 2/3;
-}
-.realcontent {
-  width: 100%;
-  height: 550px;
-  /* background: indianred; */
+  overflow: hidden;
 }
 /** cube **/
 .container {
   width: 100%;
-  height: 100%;
-  /* margin-top: 6rem; */
+  height: 550px;
 }
 #result {
   position: relative;
   height: 100%;
-  height: 100%;
+  height: 480px;
   perspective: 700px;
 }
 .face {
   width: var(--size);
   height: var(--size);
-  /* line-height: var(--size); */
   text-align: center;
-  font-size: 40px;
   position: absolute;
 }
 .face-front {
@@ -812,7 +796,7 @@ span {
   position: relative;
   transform-style: preserve-3d;
   animation: rotate3D 45s linear infinite;
-  margin-top: -7rem;
+  /* margin-top: -7rem; */
 }
 #result::after {
   content: "";
@@ -970,28 +954,23 @@ span {
   .checked {
     padding-left: 15%;
   }
+
+  /*** section 4 ***/
   .section__4 {
     display: grid;
     grid-template-rows: auto 1fr;
     grid-template-columns: auto auto;
   }
   .mon__style {
-    width: 550px;
-    height: 550px;
+    width: 500px;
+    height: auto;
     grid-area: 1/1 2/2;
   }
 
-  .mon__style__inside {
-    width: 790px;
-    height: 1000px;
-    background-image: url(/assets/img/brown_boots.jpg);
-    background-size: contain;
-    background-position: center;
-  }
   .me__contacter {
     position: relative;
-    width: auto;
-    height: 550px;
+    width: 100%;
+    height: auto;
     background: #fff;
     border: 2px solid #000;
     grid-area: 1/2 2/3;

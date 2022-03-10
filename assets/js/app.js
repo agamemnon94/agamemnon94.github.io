@@ -15,7 +15,7 @@ let container = document.getElementById('result');
 
 window.addEventListener('scroll', function () {
   branding.style.backgroundPositionY = `${-window.scrollY / 1.49}px`;
-  monStyle.style.backgroundPositionY = `${window.scrollY * 0.3}px`;
+  // monStyle.style.backgroundPositionY = `${window.scrollY * 0.3}px`;
   const scrollTop = window.pageYOffset || this.document.scroolTop;
   if (scrollTop > lastScrollTop) {
     navbar.classList.add('header__hidden');
