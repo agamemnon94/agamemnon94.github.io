@@ -133,6 +133,9 @@ body::-webkit-scrollbar-corner {
   background: var(--beige);
   user-select: none;
 }
+.black__name {
+  background: var(--beige);
+}
 .header__list {
   display: flex;
   justify-content: flex-end;
@@ -866,9 +869,17 @@ span {
   color: #111;
   font-family: "Spartan";
   font-size: 14px;
-  /* padding: 4rem 0; */
   height: 110px;
   margin-top: 20px;
+}
+.p__copy__apropos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #111;
+  font-family: "Spartan";
+  font-size: 14px;
+  height: 110px;
 }
 /************************/
 /******* À propos *******/
@@ -877,13 +888,14 @@ span {
 /** Main **/
 .bodyapropos {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   border: none;
 }
 .main__apropos {
   margin-top: 90px;
   width: 100%;
-  min-height: 200vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -916,7 +928,7 @@ span {
   width: 400px;
   margin: 0rem 4rem;
 }
-.h1apropos {
+.h2apropos {
   line-height: 100px;
   height: 110px;
   font-family: "Spartan", sans-serif;
@@ -930,11 +942,6 @@ span {
   height: 110px;
   border-bottom: 1px solid var(--dark);
 }
-.espace2 {
-  width: 100%;
-  height: 110px;
-  border-bottom: 1px solid var(--dark);
-}
 .p__apropos {
   font-family: "Spartan", sans-serif;
   font-size: 16px;
@@ -942,10 +949,16 @@ span {
   line-height: 30px;
 }
 .clear__border {
-  border-top: 1px solid var(--beige);
+  border-bottom: 1px solid var(--beige);
 }
 .img__apropos {
   margin-top: 3rem;
+}
+.h3apropos {
+  font-family: "Spartan", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 3rem 0 0rem 0;
 }
 /************************/
 /****** RESPONSIVE ******/

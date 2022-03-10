@@ -21,13 +21,18 @@ let nightbtn = document.getElementById('nightbtn');
 let body = document.getElementById('bodynight');
 let sun = document.querySelector('.sun');
 let moon = document.querySelector('.moon');
-let p__apropos = document.querySelectorAll('.p__apropos');
+let h2apropos = document.querySelectorAll('.h2apropos');
+let espace = document.querySelectorAll('.espace');
 
 nightbtn.addEventListener('click', function () {
   body.classList.toggle('body__night');
   sun.classList.toggle('light');
   moon.classList.toggle('darknight');
-  p__apropos.forEach(item => {
+  h2apropos.forEach(item => {
     item.classList.toggle('clear__border');
   });
+  espace.forEach(element => {
+    element.classList.toggle('clear__border');
+  });
+
 })
