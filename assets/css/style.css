@@ -898,25 +898,35 @@ span {
 .article1 {
   display: flex;
   flex-direction: column;
-  width: 550px;
+  width: 400px;
+  margin: 0rem 4rem;
 }
 .h1apropos {
   font-family: "Spartan", sans-serif;
   font-size: 25px;
   font-weight: 500;
-  margin: 2rem 0;
-  padding: 0 2rem;
+  margin: 3rem 0;
+  /* padding: 0 2rem; */
+}
+.espace {
+  width: 100%;
+  height: 31px;
+  margin: 0rem 0;
+  /* padding: 0 4rem; */
 }
 .p__apropos {
   font-family: "Spartan", sans-serif;
   font-size: 16px;
-  padding: 2rem;
+  padding: 2rem 0;
+  line-height: 30px;
+  border-top: 1px solid var(--dark);
 }
 
 .article2 {
   display: flex;
   flex-direction: column;
-  width: 550px;
+  width: 400px;
+  margin: 0rem 4rem;
 }
 /************************/
 /****** RESPONSIVE ******/
