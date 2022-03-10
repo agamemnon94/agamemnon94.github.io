@@ -1,7 +1,3 @@
-window.addEventListener('load', () => {
-  document.body.classList.remove("clean__transition");
-  exp1.style.opacity = "1";
-});
 const exp1 = document.getElementById('exp1');
 const branding = document.getElementById('branding');
 const headerContainer = document.querySelector('.header__container');
@@ -12,7 +8,11 @@ let navbar = document.querySelector('.header__container');
 let cube = document.getElementById('cube');
 let container = document.getElementById('result');
 
-
+window.addEventListener('load', () => {
+  document.body.classList.remove("clean__transition");
+  exp1.style.opacity = "1";
+});
+// Navbar et scroll
 window.addEventListener('scroll', function () {
   branding.style.backgroundPositionY = `${-window.scrollY / 1.49}px`;
   // monStyle.style.backgroundPositionY = `${window.scrollY * 0.3}px`;
@@ -70,7 +70,7 @@ nightbtn.addEventListener('click', function () {
   sun.classList.toggle('light');
   moon.classList.toggle('darknight');
 })
-
+// Mouvement du cube 3D
 container.addEventListener('mousemove', (e) => {
   cube.style.animation = 'none';
   rotY = e.clientX / 1.2;
