@@ -1347,6 +1347,9 @@ span {
     height: 550px;
     grid-area: 2/1/3/4;
   }
+  .article1 h2 {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 770px) {
