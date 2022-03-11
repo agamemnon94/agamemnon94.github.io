@@ -81,3 +81,24 @@ container.addEventListener('mousemove', (e) => {
     cube.style.animation = 'rotate3D 45s infinite linear';
   });
 })
+
+const btn1 = document.querySelector('.btn1');
+let navBar = document.querySelector('.header__container');
+let accueil = document.getElementById('accueil');
+let propos = document.getElementById('propos');
+let projet = document.getElementById('projet');
+let alexandre = document.getElementById('alexandre');
+
+function burger() {
+  btn1.classList.toggle('active')
+  navBar.classList.toggle('active__menu');
+  accueil.classList.toggle('active__a');
+  propos.classList.toggle('active__a');
+  projet.classList.toggle('active__a');
+  alexandre.classList.toggle('active');
+
+}
+btn1.addEventListener('click', burger);
+
+
+

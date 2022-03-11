@@ -26,13 +26,13 @@
             <nav class="nav__container">
                 <ul class="header__list">
                     <li class="item__accueil">
-                        <a class="header__a" href="/index.html">Accueil</a>
+                        <a id="accueil" class="header__a" href="/index.html">Accueil</a>
                     </li>
                     <li class="item__accueil">
-                        <a class="header__a" href="apropos.html">À propos</a>
+                        <a id="propos" class="header__a" href="apropos.html">À propos</a>
                     </li>
                     <li class="item__accueil">
-                        <a class="header__a" href="apropos.html">Projets</a>
+                        <a id="projet" class="header__a" href="apropos.html">Projets</a>
                     </li>
                 </ul>
                 <button class="nightbtn" id="nightbtn" type="text">
@@ -41,6 +41,18 @@
                 </button>
             </nav>
         </div>
+
+        <div class="container__burger btn__toggle__container">
+            <div class="box">
+                <div class="cont-lignes btn1">
+                    <div class="lignes" id="ligne1">
+                    </div>
+                    <div class="lignes" id="ligne2"></div>
+                    <div class=" lignes" id="ligne3"></div>
+                </div>
+            </div>
+        </div>
+
     </header>
 
     <main>
@@ -146,24 +158,28 @@
                 <p class="branding__p">07_BRANDING</p>
             </div>
             <div class="competence">
-                <div class="checked">
-                    <img src="/assets/icons/white_check_box.png" alt="Checked box">
-                    <span class="comp__text">Front end - HTML, CSS, SCSS</span>
-                </div>
-                <div class="checked">
-                    <img src="/assets/icons/white_check_box.png" alt="Checked box">
-                    <span class="comp__text">Back End - PHP et SQL</span>
-                </div>
-                <div class="checked">
-                    <img src="/assets/icons/white_check_box.png" alt="Checked box">
-                    <span class="comp__text">Javascript, Réact</span>
-                </div>
-                <div class="checked">
-                    <img src="/assets/icons/white_check_box.png" alt="Checked box">
-                    <span class="comp__text">Librairie - Symfony</span>
+
+                <div class="checked__box">
+
+                    <div class="checked">
+                        <img src="/assets/icons/white_check_box.png" alt="Checked box">
+                        <span class="comp__text">Front end - HTML, CSS, SCSS</span>
+                    </div>
+                    <div class="checked">
+                        <img src="/assets/icons/white_check_box.png" alt="Checked box">
+                        <span class="comp__text">Back End - PHP et SQL</sp>
+                    </div>
+                    <div class="checked">
+                        <img src="/assets/icons/white_check_box.png" alt="Checked box">
+                        <span class="comp__text">Javascript, Réact</span>
+                    </div>
+                    <div class="checked">
+                        <img src="/assets/icons/white_check_box.png" alt="Checked box">
+                        <span class="comp__text">Librairie - Symfony</span>
+                    </div>
+                    <p class="competence__p">08_COMPÉTENCES</p>
                 </div>
 
-                <p class="competence__p">08_COMPÉTENCES</p>
             </div>
         </section>
         <section class="section__4">

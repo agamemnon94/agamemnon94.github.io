@@ -22,17 +22,17 @@
 <body class="clean__transition bodyapropos" id="bodynight">
   <header>
     <div class="header__container">
-      <p class="header__name">Alexandre Braga</p>
+      <p class="header__name" id="alexandre">Alexandre Braga</p>
       <nav class="nav__container">
         <ul class="header__list">
           <li class="item__accueil">
-            <a class="header__a" href="/index.html">Accueil</a>
+            <a id="accueil" class="header__a" href="/index.html">Accueil</a>
           </li>
           <li class="item__accueil">
-            <a class="header__a" href="apropos.html">À propos</a>
+            <a id="propos" class="header__a" href="apropos.html">À propos</a>
           </li>
           <li class="item__accueil">
-            <a class="header__a" href="apropos.html">Projets</a>
+            <a id="projet" class="header__a" href="apropos.html">Projets</a>
           </li>
         </ul>
         <button class="nightbtn" id="nightbtn" type="text">
@@ -41,6 +41,18 @@
         </button>
       </nav>
     </div>
+
+    <div class="container__burger btn__toggle__container">
+      <div class="box">
+        <div class="cont-lignes btn1">
+          <div class="lignes" id="ligne1">
+          </div>
+          <div class="lignes" id="ligne2"></div>
+          <div class=" lignes" id="ligne3"></div>
+        </div>
+      </div>
+    </div>
+
   </header>
 
   <main class="main__apropos">
