@@ -18,7 +18,7 @@
 :root {
   --beige: #aeaea782;
   --dark: #0c0c0c;
-  --size: 230px;
+  --size: 220px;
   --translateZ: calc(var(--size) / 2);
   --position: calc(50% - var(--size) / 2);
   --3dcolor: rgb(170, 106, 170);
@@ -173,6 +173,18 @@ body::-webkit-scrollbar-corner {
 /******************/
 /****** MAIN ******/
 /******************/
+@keyframes appears {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+main {
+  opacity: 0;
+  animation: appears 1s ease-in-out 1 forwards;
+}
 .section__1 {
   display: grid;
   grid-template-rows: auto;
@@ -872,15 +884,7 @@ span {
   height: 110px;
   margin-top: 20px;
 }
-.p__copy__apropos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #111;
-  font-family: "Spartan";
-  font-size: 14px;
-  height: 110px;
-}
+
 /************************/
 /******* À propos *******/
 /************************/
@@ -914,7 +918,7 @@ span {
   min-height: 40vh;
   display: flex;
   justify-content: center;
-  /* margin-top: 10rem; */
+  margin-top: 4rem;
 }
 .article1 {
   display: flex;
@@ -944,7 +948,7 @@ span {
 }
 .p__apropos {
   font-family: "Spartan", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   padding: 2rem 0;
   line-height: 30px;
 }
@@ -959,6 +963,49 @@ span {
   font-size: 18px;
   font-weight: 600;
   margin: 3rem 0 0rem 0;
+}
+
+.p__copy__apropos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #111;
+  font-family: "Spartan";
+  font-size: 14px;
+  height: 110px;
+  border-top: 2px solid #000;
+}
+
+.contact__apropos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 47%;
+  height: 200px;
+  /* background: var(--beige); */
+}
+.footer__contact__icons img {
+  margin-right: 2rem;
+  width: 30px;
+  height: 30px;
+}
+.contacts {
+  margin-bottom: 2rem;
+}
+.contacts a {
+  text-decoration: none;
+}
+.a_mail {
+  text-decoration: none;
+  color: var(--dark);
+  font-family: "Spartan", sans-serif;
+  font-size: 12px;
+  padding: 2rem 0;
+}
+.span_mail {
+  color: var(--dark);
+  font-family: "Spartan", sans-serif;
+  font-size: 12px;
 }
 /************************/
 /****** RESPONSIVE ******/

@@ -76,7 +76,7 @@ container.addEventListener('mousemove', (e) => {
   rotY = e.clientX / 1.2;
   rotX = e.clientY / 1.2;
   cube.style.transform = 'rotateY(' + rotY + 'deg) rotateX(' + rotX + 'deg)';
-  cube.style.transition = '0.5s ease-out';
+  // cube.style.transition = '0.2s';
   container.addEventListener('mouseleave', () => {
     cube.style.animation = 'rotate3D 45s infinite linear';
   });
