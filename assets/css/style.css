@@ -360,7 +360,7 @@ main {
 }
 .cv_mobile {
   position: relative;
-  width: 350px;
+  width: 450px;
   height: 450px;
   background-color: #fff;
   box-shadow: 2px 5px 25px #0004;
@@ -1497,6 +1497,9 @@ span {
   .header__hidden {
     top: 0px;
   }
+  .cv_mobile {
+    width: 350px;
+  }
 }
 
 @media screen and (max-width: 380px) {
@@ -1512,51 +1515,55 @@ span {
   .comp__text {
     font-size: 14px;
   }
+
+  .cv_mobile {
+    width: 300px;
+  }
   .span {
     margin: 0;
   }
   .span1 {
     position: absolute;
     top: 40px;
-    left: 60px;
+    left: 20px;
     font-size: 20px;
   }
   .span2 {
     position: absolute;
     width: 120px;
     top: 70px;
-    left: 220px;
+    left: 180px;
     transform: rotateZ(90deg);
     font-size: 45px;
   }
   .span3 {
     position: absolute;
     top: 90px;
-    left: 60px;
+    left: 20px;
     font-size: 50px;
   }
   .span4 {
     position: absolute;
     top: 100px;
-    left: 110px;
+    left: 70px;
     font-size: 50px;
   }
   .span5 {
     position: absolute;
     top: 90px;
-    left: 165px;
+    left: 135px;
     font-size: 50px;
   }
   .span6 {
     position: absolute;
     top: 220px;
-    left: 60px;
+    left: 20px;
     font-size: 40px;
   }
   .span7 {
     position: absolute;
     top: 210px;
-    left: 110px;
+    left: 70px;
     width: 60px;
     height: 60px;
     background-clip: content-box;
@@ -1565,19 +1572,19 @@ span {
   .span8 {
     position: absolute;
     top: 220px;
-    left: 200px;
+    left: 145px;
     font-size: 40px;
   }
   .span9 {
     position: absolute;
     top: 305px;
-    left: 60px;
+    left: 20px;
     font-size: 35px;
   }
   .span10 {
     position: absolute;
     top: 305px;
-    left: 140px;
-    font-size: 38px;
+    left: 120px;
+    font-size: 30px;
   }
 }
