@@ -1289,9 +1289,11 @@ span {
     flex-wrap: wrap;
     width: 100%;
   }
-
   .presentation {
-    width: 100%;
+    width: 380px;
+  }
+  .cv_mobile {
+    width: 340px;
   }
   .experiences {
     align-self: flex-start;
@@ -1300,7 +1302,7 @@ span {
     order: 3;
   }
   .my__byke {
-    width: 50%;
+    width: 380px;
   }
   /*************** Section__3 **************/
   .section__3 {
