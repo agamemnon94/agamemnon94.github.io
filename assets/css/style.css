@@ -1352,7 +1352,7 @@ span {
   }
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 805px) {
   .header__name {
     text-align: center;
   }
