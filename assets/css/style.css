@@ -1193,8 +1193,21 @@ span {
   .section__2 {
     display: flex;
   }
+  .cv_mobile {
+    width: 350px;
+    height: 450px;
+  }
   .my__byke {
     width: 550px;
+    max-width: none;
+  }
+  .experiences {
+    width: 700px;
+    height: 650px;
+  }
+  .diaporama {
+    width: 400px;
+    height: 500px;
   }
   .section__3 {
     display: flex;
