@@ -451,11 +451,13 @@ main {
   position: absolute;
   top: 305px;
   left: 45px;
+  font-size: 45px;
 }
 .span10 {
   position: absolute;
   top: 305px;
   right: 45px;
+  font-size: 35px;
 }
 .span10::after {
   content: "";
