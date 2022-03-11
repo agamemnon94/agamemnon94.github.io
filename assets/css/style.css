@@ -277,7 +277,7 @@ main {
   object-fit: cover;
   object-position: 0px -185px;
   transform: scale(1.2);
-  transition: transform 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .moi:hover {
   transform: scale(1);
@@ -703,7 +703,6 @@ main {
 }
 .checked {
   display: flex;
-  /* background: var(--beige); */
   margin: 4rem 0;
 }
 .checked img {
@@ -1116,8 +1115,48 @@ span {
 /************************/
 /****** RESPONSIVE ******/
 /************************/
-
 @media screen and (max-width: 1450px) {
+  .section__1 {
+    display: flex;
+  }
+  .box__moi {
+    width: calc(100% / 3);
+  }
+  .moi {
+    object-position: 0px -40px;
+  }
+  .bloc__whoami {
+    width: calc(100% / 3);
+  }
+  .work_Here {
+    width: calc(100% / 3);
+    max-width: auto;
+  }
+  .section__2 {
+    display: flex;
+  }
+  .my__byke {
+    width: 550px;
+  }
+  .section__3 {
+    display: flex;
+  }
+  .formation {
+    width: 650px;
+  }
+  .branding {
+    width: 500px;
+  }
+  competence {
+    width: 500px;
+  }
+
+  .checked {
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 1070px) {
   .section__1 {
     display: grid;
     grid-template-rows: auto auto;
@@ -1126,7 +1165,7 @@ span {
   }
   .box__moi {
     grid-area: 1/1/2/2;
-    width: 100%;
+    width: 450px;
     height: 500px;
     border: 2px solid #000;
   }
@@ -1136,6 +1175,7 @@ span {
     object-position: center;
   }
   .bloc__whoami {
+    width: 100%;
     height: auto;
     grid-area: 1/2/2/3;
   }
@@ -1143,8 +1183,9 @@ span {
     padding: 0 2rem;
   }
   .work_Here {
+    width: 100%;
     max-width: 100%;
-    grid-area: 2/1/3/3;
+    grid-area: 2/1/3/4;
   }
 
   /*** section 2 ***/
@@ -1449,6 +1490,10 @@ span {
   }
   .section__1 {
     margin-top: 0px;
+  }
+
+  .header__hidden {
+    top: 0px;
   }
 }
 
