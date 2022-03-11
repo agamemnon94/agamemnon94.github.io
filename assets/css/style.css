@@ -1242,6 +1242,9 @@ span {
   .article1 h2 {
     font-size: 24px;
   }
+  .bloc__whoami h2 {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 1070px) {
