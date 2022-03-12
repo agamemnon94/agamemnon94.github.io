@@ -19,6 +19,9 @@
   --beige: #aeaea782;
   --beigefull: #aeaea7;
   --dark: #0c0c0c;
+  --deepdark: rgb(20, 19, 15);
+  --dark2: rgb(56, 56, 56);
+  --goldy: #dbd3b6;
   --clearDark: #201f1f;
   --corail: rgb(232, 49, 81);
   --size: 220px;
@@ -41,7 +44,7 @@ body {
   position: relative;
 }
 .body__night
-  *:not(.work_Here, .my__byke, .mon__style, .branding, .span, .reals, .sun, .moon, .face-front, .face-back, .face-right, .face-left, .face-top, .face-bottom, .face, .lignes) {
+  *:not(.work_Here, .my__byke, .mon__style, .branding, .span, .reals, .sun, .moon, .face-front, .face-back, .face-right, .face-left, .face-top, .face-bottom, .face, .lignes, .a__video) {
   background: var(--dark);
   color: #fff;
 }
@@ -1091,10 +1094,35 @@ span {
   font-family: "Spartan", sans-serif;
   font-size: 12px;
 }
-.a__img__projet {
-  /* width: 200px; */
+.video a {
+  font-size: 18px;
+  text-decoration: none;
+  background-image: linear-gradient(
+    to right,
+    var(--deepdark),
+    var(--dark2),
+    var(--goldy),
+    var(--dark2),
+    var(--deepdark)
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  animation: movingLight 5s ease-in-out infinite;
 }
-
+@keyframes movingLight {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 /************************/
 /****** ANIMATIONS ******/
 /************************/
