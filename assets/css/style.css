@@ -89,7 +89,7 @@ body::-webkit-scrollbar-track {
   background: var(--dark);
 }
 body::-webkit-scrollbar-thumb {
-  background-color: var(--beige); /* color of the scroll thumb */
+  background-color: var(--beigefull); /* color of the scroll thumb */
   border-radius: 10px; /* roundness of the scroll thumb */
   border: 3px solid var(--dark); /* creates padding around scroll thumb */
 }
@@ -363,8 +363,8 @@ main {
 }
 .cv_mobile {
   position: relative;
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
   background-color: #fff;
   box-shadow: 2px 5px 25px #0004;
   border-radius: 4px;
@@ -374,7 +374,7 @@ main {
   font-size: 40px;
   font-family: "Archivo";
 }
-@keyframes movingLight {
+@keyframes movingBG {
   0% {
     background-position: 50% 0%;
   }
@@ -394,7 +394,7 @@ main {
   background-repeat: no-repeat;
   -webkit-background-clip: text;
   color: transparent;
-  animation: movingLight 6s ease-in-out infinite;
+  animation: movingBG 6s ease-in-out infinite;
   user-select: none;
   padding: 0;
 }
