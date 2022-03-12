@@ -1041,6 +1041,8 @@ span {
 }
 .img__apropos {
   margin-top: 3rem;
+  width: 400px;
+  height: auto;
 }
 .h3apropos {
   font-family: "Spartan", sans-serif;
@@ -1048,7 +1050,6 @@ span {
   font-weight: 600;
   margin: 3rem 0 0rem 0;
 }
-
 .p__copy__apropos {
   display: flex;
   justify-content: center;
@@ -1059,7 +1060,6 @@ span {
   height: 110px;
   border-top: 2px solid #000;
 }
-
 .contact__apropos {
   display: flex;
   flex-direction: column;
@@ -1091,6 +1091,10 @@ span {
   font-family: "Spartan", sans-serif;
   font-size: 12px;
 }
+.a__img__projet {
+  /* width: 200px; */
+}
+
 /************************/
 /****** ANIMATIONS ******/
 /************************/
