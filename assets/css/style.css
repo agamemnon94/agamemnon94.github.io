@@ -278,7 +278,7 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 0px -185px;
+  object-position: 0px -245px;
   transform: scale(1.2);
   transition: all 0.5s ease-in-out;
 }
