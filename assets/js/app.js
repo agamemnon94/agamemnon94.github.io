@@ -82,6 +82,8 @@ container.addEventListener('mousemove', (e) => {
   });
 })
 
+
+// Menu burger
 const btn1 = document.querySelector('.btn1');
 let navBar = document.querySelector('.header__container');
 let accueil = document.getElementById('accueil');
