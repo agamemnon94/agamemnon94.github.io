@@ -309,13 +309,66 @@ main {
   font-weight: 500;
   font-size: 26px;
   margin-bottom: 2rem;
+  position: relative;
+}
+.bloc__whoami h2::before,
+.bloc__whoami h2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.bloc__whoami h2::before {
+  background-color: white;
+  animation: typewriter 2.5s steps(30) forwards 1s;
+}
+.bloc__whoami h2::after {
+  width: 0.125em;
+  background: black;
+  animation: typewriter 2.5s steps(30) forwards 1s, blink 0.75s steps(30) 20;
 }
 .p__who {
   font-family: "Spartan";
   font-size: 20px;
   padding: 10px 0;
   text-align: center;
+  opacity: 0;
 }
+.p__who:nth-child(2) {
+  transform: translateY(3rem);
+  animation: fadeInUp 1s ease-in-out forwards 3.4s;
+}
+.p__who:nth-child(3) {
+  transform: translateY(4rem);
+  animation: fadeInUp 1s ease-in-out forwards 4.4s;
+}
+.p__who:nth-child(4) {
+  transform: translateY(5rem);
+  animation: fadeInUp 1s ease-in-out forwards 5.4s;
+}
+.p__who:nth-child(5) {
+  transform: translateY(6rem);
+  animation: fadeInUp 1s ease-in-out forwards 6.4s;
+}
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+@keyframes blink {
+  to {
+    background-color: transparent;
+  }
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 .a_propos {
   position: absolute;
   top: 90%;
