@@ -327,7 +327,7 @@ main {
 .bloc__whoami h2::after {
   width: 0.125em;
   background: black;
-  animation: typewriter 2.5s steps(30) forwards 1s, blink 0.75s steps(30) 20;
+  animation: typewriter 2.5s steps(30) forwards 1.5s, blink 0.75s steps(30) 20;
 }
 .p__who {
   font-family: "Spartan";
