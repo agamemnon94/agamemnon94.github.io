@@ -322,7 +322,7 @@ main {
 }
 .bloc__whoami h2::before {
   background-color: white;
-  animation: typewriter 2.5s steps(30) forwards 1s;
+  animation: typewriter 2.5s steps(30) forwards 1.5s;
 }
 .bloc__whoami h2::after {
   width: 0.125em;
