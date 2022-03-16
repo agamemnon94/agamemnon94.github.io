@@ -82,22 +82,19 @@ container.addEventListener('mousemove', (e) => {
   });
 })
 
-
 // Menu burger
 const btn1 = document.querySelector('.btn1');
 let navBar = document.querySelector('.header__container');
-let accueil = document.getElementById('accueil');
-let propos = document.getElementById('propos');
-let projet = document.getElementById('projet');
 let alexandre = document.getElementById('alexandre');
+let headerA = document.querySelectorAll('.header__a');
 
 function burger() {
   btn1.classList.toggle('active')
   navBar.classList.toggle('active__menu');
-  accueil.classList.toggle('active__a');
-  propos.classList.toggle('active__a');
-  projet.classList.toggle('active__a');
   alexandre.classList.toggle('active');
+  headerA.forEach(item => {
+    item.classList.toggle('active__a');
+  });
 
 }
 btn1.addEventListener('click', burger);

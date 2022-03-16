@@ -44,7 +44,7 @@ body {
   position: relative;
 }
 .body__night
-  *:not(.work_Here, .my__byke, .mon__style, .branding, .span, .reals, .sun, .moon, .face-front, .face-back, .face-right, .face-left, .face-top, .face-bottom, .face, .lignes, .a__video) {
+  *:not(.work_Here, .my__byke, .mon__style, .branding, .span, .reals, .sun, .moon, .face-front, .face-back, .face-right, .face-left, .face-top, .face-bottom, .face, .lignes, .a__video, .header__list, .nav__container) {
   background: var(--dark);
   color: #fff;
 }
@@ -189,34 +189,33 @@ body::-webkit-scrollbar-corner {
   position: absolute;
   top: 15px;
   right: 15px;
+  width: 60px;
+  height: 60px;
   box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.6);
   padding: 8px;
   border-radius: 10px;
   background: var(--clearDark);
 }
-.box {
-  height: 44px;
-  width: 44px;
-  position: relative;
-  z-index: 1000;
-}
+
 .cont-lignes {
-  width: 44px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
+  /* background: pink; */
 }
 .lignes {
   width: 100%;
-  height: 6px;
+  height: 4px;
   border-radius: 5px;
   background: var(--beigefull);
   position: absolute;
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, top 0.5s 0.5s ease-in-out,
+    opacity 0.5s 0.5s ease-in-out;
 }
 
 .lignes:nth-child(1) {
@@ -232,15 +231,17 @@ body::-webkit-scrollbar-corner {
   top: 18px;
   transform: rotate(135deg);
   background: var(--corail);
+  transition: top 0.5s ease-in-out, transform 0.5s 0.5s ease-in-out;
 }
 .btn1.active .lignes:nth-child(2) {
   opacity: 0;
-  transform: translateX(-20px);
+  background: var(--corail);
 }
 .btn1.active .lignes:nth-child(3) {
   top: 18px;
   transform: rotate(-135deg);
   background: var(--corail);
+  transition: top 0.5s ease-in-out, transform 0.5s 0.5s ease-in-out;
 }
 
 /******************/
@@ -1641,13 +1642,15 @@ span {
     transform: scale(0.9);
   }
   .header__container {
-    display: none;
+    /* display: none; */
+    background: transparent;
   }
   .nav__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    border: none;
   }
   .header__list {
     height: 100%;
@@ -1656,15 +1659,20 @@ span {
     align-items: center;
     padding: 4rem 0;
     margin-top: 8rem;
+    background: transparent;
+    border: none;
   }
   .item__accueil {
     margin: 2rem 0;
   }
   .nightbtn {
-    margin-bottom: 1rem;
-    min-height: 50px;
-    min-width: 50px;
-    margin-top: 8rem;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    /* margin-bottom: 1rem; */
+    /* min-height: 50px; */
+    /* min-width: 50px; */
+    /* margin-top: 8rem; */
   }
   .header__container.active__menu {
     background: var(--dark);
@@ -1677,7 +1685,11 @@ span {
     border-bottom: 2px solid var(--beige);
     transition: 0.2s ease-out;
   }
+  .header__name {
+    display: none;
+  }
   .header__name.active {
+    display: block;
     background: none;
     color: var(--beigefull);
   }
@@ -1691,6 +1703,8 @@ span {
   .header__a.active__a {
     display: block;
   }
+  /** Fin burger **/
+
   .section__1 {
     margin-top: 0px;
   }
