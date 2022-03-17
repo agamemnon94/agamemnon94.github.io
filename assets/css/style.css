@@ -175,6 +175,9 @@ body::-webkit-scrollbar-corner {
 .header__a:hover::after {
   width: 100%;
 }
+#projet {
+  cursor: pointer;
+}
 /* *************************** */
 /* *   Bouton toggle burger  * */
 /* *************************** */

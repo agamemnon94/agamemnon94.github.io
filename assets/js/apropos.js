@@ -1,5 +1,6 @@
 let lastScrollTop = 0;
 let navbar = document.querySelector('.header__container');
+let proj = document.querySelector('#projet');
 
 window.addEventListener('load', () => {
   document.body.classList.remove("clean__transition");
@@ -55,5 +56,7 @@ function burger() {
 }
 btn1.addEventListener('click', burger);
 
-
+proj.addEventListener('click', () => {
+  document.getElementById('section__apropos2').scrollIntoView({ block: "start", behavior: "smooth", top: 0, left: 0 })
+})
 

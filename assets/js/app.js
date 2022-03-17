@@ -99,5 +99,3 @@ function burger() {
 }
 btn1.addEventListener('click', burger);
 
-
-
