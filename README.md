@@ -1,5 +1,5 @@
 # agamemnon94.github.io
-resume site
+Resume site / Mon site CV
 
 Comment passe-t-on d'une carrière commerciale au développement web ? Eh bien comme en
 témoigne mon tout premier job au service informatique d'une banque, par passion. À l'âge de douze ou treize
