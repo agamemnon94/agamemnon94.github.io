@@ -44,7 +44,7 @@ body {
   position: relative;
 }
 .body__night
-  *:not(.work_Here, .my__byke, .mon__style, .branding, .span, .reals, .sun, .moon, .face-front, .face-back, .face-right, .face-left, .face-top, .face-bottom, .face, .lignes, .a__video, .header__list, .nav__container) {
+  *:not(.work_Here, .my__bike, .mon__style, .branding, .span, .reals, .sun, .moon, .face-front, .face-back, .face-right, .face-left, .face-top, .face-bottom, .face, .lignes, .a__video, .header__list, .nav__container) {
   background: var(--dark);
   color: #fff;
 }
@@ -656,7 +656,7 @@ main {
   border-bottom: 1px solid var(--beige);
   border-right: 1px solid var(--beige);
 }
-.my__byke {
+.my__bike {
   position: relative;
   max-width: 550px;
   max-height: 650px;
@@ -667,7 +667,7 @@ main {
   border: 2px solid #000;
   grid-area: 2/3 3/4;
 }
-.my_byke_p {
+.my_bike_p {
   position: absolute;
   top: 90%;
   left: 50%;
@@ -676,6 +676,7 @@ main {
   font-size: 16px;
   font-weight: 400;
   color: #fff;
+  text-align: center;
 }
 
 /********** section 3 **********/
@@ -1257,7 +1258,7 @@ span {
     width: 1100px;
     height: 650px;
   }
-  .my__byke {
+  .my__bike {
     width: 800px;
     max-width: none;
   }
@@ -1288,7 +1289,7 @@ span {
     width: calc(100% / 3);
   }
   .moi {
-    object-position: 0px -40px;
+    object-position: 0px 0px;
   }
   .bloc__whoami {
     width: calc(100% / 3);
@@ -1304,7 +1305,7 @@ span {
     width: 350px;
     height: 450px;
   }
-  .my__byke {
+  .my__bike {
     width: 550px;
     max-width: none;
   }
@@ -1406,7 +1407,7 @@ span {
   .diaporama {
     width: 70%;
   }
-  .my__byke {
+  .my__bike {
     grid-area: 2/2/3/4;
     width: 500px;
   }
@@ -1500,7 +1501,7 @@ span {
     height: auto;
     order: 3;
   }
-  .my__byke {
+  .my__bike {
     width: 380px;
   }
   /*************** Section__3 **************/
@@ -1672,10 +1673,6 @@ span {
     position: fixed;
     top: 22.5px;
     left: 15px;
-    /* margin-bottom: 1rem; */
-    /* min-height: 50px; */
-    /* min-width: 50px; */
-    /* margin-top: 8rem; */
   }
   .header__container.active__menu {
     background: var(--dark);
@@ -1728,6 +1725,13 @@ span {
 }
 
 @media screen and (max-width: 380px) {
+  .box__moi {
+    width: 100%;
+    height: 50vh;
+  }
+  .moi {
+    object-position: 0 30px;
+  }
   .h2apropos1 {
     font-size: 16px;
     /* height: 100px; */
