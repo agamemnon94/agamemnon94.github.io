@@ -596,7 +596,7 @@ main {
   font-weight: 300;
   padding-bottom: 2rem;
 }
-.role {
+.myrole {
   font-family: "Spartan";
   font-size: 22px;
   font-weight: 500;
@@ -1567,7 +1567,7 @@ span {
   .expdiv {
     width: 90%;
   }
-  .role {
+  .myrole {
     text-align: center;
   }
   .descri__post {
