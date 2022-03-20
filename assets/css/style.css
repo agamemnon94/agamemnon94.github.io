@@ -339,6 +339,7 @@ main {
   padding: 10px 0;
   text-align: center;
   opacity: 0;
+  color: var(--dark);
 }
 .p__who:nth-child(2) {
   transform: translateY(3rem);
