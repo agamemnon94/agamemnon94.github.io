@@ -41,6 +41,7 @@ body {
   min-height: auto;
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
+  padding-top: 90px;
 }
 .body__night
   *:not(.work_Here, .my__bike, .mon__style, .branding, .span, .reals, .sun, .moon, .face-front, .face-back, .face-right, .face-left, .face-top, .face-bottom, .face, .lignes, .a__video, .header__list, .nav__container) {
@@ -268,7 +269,7 @@ main {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 90px;
+  /* margin-top: 90px; */
 }
 .box__moi {
   grid-area: 1/2 1/2;
