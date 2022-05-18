@@ -112,7 +112,8 @@ body::-webkit-scrollbar-corner {
   border: 3px solid #000;
   background: #ffffff;
   z-index: 19;
-  transition: all 0.2s ease-out;
+  /* transition: all 0.2s ease-out; */
+  transition: 0.3s ease-in-out 0.3s;
 }
 .header__hidden {
   top: -90px;
