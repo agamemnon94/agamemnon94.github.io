@@ -33,7 +33,7 @@
 /*** GENERALITES  ***/
 /********************/
 html {
-  background: white;
+  /* background: white; */
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
