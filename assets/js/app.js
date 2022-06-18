@@ -12,6 +12,7 @@ window.addEventListener('load', () => {
   document.body.classList.remove("clean__transition");
   exp1.style.opacity = "1";
 });
+
 // Navbar et scroll
 window.addEventListener('scroll', function () {
   branding.style.backgroundPositionY = `${-window.scrollY / 1.49}px`;
@@ -57,14 +58,14 @@ precedant.addEventListener("click", previous);
 // Fin Diaporama fiches expériences
 
 
-// Fonction mode nuit sur le site
+// Mode nuit sur le site
 let nightbtn = document.getElementById('nightbtn');
 let body = document.getElementById('bodynight');
 let sun = document.querySelector('.sun');
 let moon = document.querySelector('.moon');
 
-nightbtn.addEventListener('click', function () {
-  body.classList.toggle('body__night');
+nightbtn.addEventListener('click', () => {
+  // body.classList.toggle('body__night');
   suivant.classList.toggle('next__dark__active');
   precedant.classList.toggle('prev__dark__active');
   sun.classList.toggle('light');
@@ -76,7 +77,7 @@ container.addEventListener('mousemove', (e) => {
   rotY = e.clientX / 1.2;
   rotX = e.clientY / 1.2;
   cube.style.transform = 'rotateY(' + rotY + 'deg) rotateX(' + rotX + 'deg)';
-  // cube.style.transition = '0.2s';
+  cube.style.transition = '0.1s';
   container.addEventListener('mouseleave', () => {
     cube.style.animation = 'rotate3D 45s infinite linear';
   });
