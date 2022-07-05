@@ -70,6 +70,7 @@ nightbtn.addEventListener('click', () => {
   precedant.classList.toggle('prev__dark__active');
   sun.classList.toggle('light');
   moon.classList.toggle('darknight');
+
 })
 
 // Mouvement du cube 3D

@@ -135,7 +135,6 @@ body::-webkit-scrollbar-corner {
   font-family: "Spartan", sans-serif;
   font-weight: 500;
   font-size: 30px;
-  justify-self: center;
   margin: 0 auto;
   width: 100%;
   background: var(--beige);
