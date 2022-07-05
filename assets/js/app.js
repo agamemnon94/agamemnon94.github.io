@@ -65,12 +65,13 @@ let sun = document.querySelector('.sun');
 let moon = document.querySelector('.moon');
 
 nightbtn.addEventListener('click', () => {
-  // body.classList.toggle('body__night');
+  body.classList.toggle('body__night');
   suivant.classList.toggle('next__dark__active');
   precedant.classList.toggle('prev__dark__active');
   sun.classList.toggle('light');
   moon.classList.toggle('darknight');
 })
+
 // Mouvement du cube 3D
 container.addEventListener('mousemove', (e) => {
   cube.style.animation = 'none';
